@@ -6,6 +6,7 @@ This repository contains all the resources needed for the CPEN400A assignments a
 
 * [Setting up Assignment Git Repository](assignments/setup.md)
 * [Assignment Submission Instructions](assignments/canvas-submission.md)
+* [Assignment 0 - Installing required software](assignments/assignment-0.md)
 * [Assignments](assignments)
     1. Assignment 1 - released on Sep 17, due Oct 1
     2. Assignment 2 - released on Oct 1, due Oct 15
