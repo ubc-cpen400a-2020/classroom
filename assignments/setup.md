@@ -9,6 +9,9 @@ For all the assignments in this course, you will be using Github to share your c
 3. [Submit your Github username on UBC Canvas](#share-your-github-username)
 4. [Accept invitation and clone your repository](#clone-your-repository)
 
+We also provide two Git tutorial videos for your reference:
+1. Basic Git operations: [https://youtu.be/tD-6X4IAXs8](https://youtu.be/tD-6X4IAXs8).
+2. Git branching: [https://youtu.be/4icXtQm2-Hw](https://youtu.be/4icXtQm2-Hw). Note that you do not need Git branching feature to finish your assignments, but it can help you better organize your repository.
 
 ### Install Git
 
