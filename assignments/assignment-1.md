@@ -110,7 +110,7 @@ To help you get started, you will need to structure your project like the follow
 
 ## Testing
 
-**To test your code, insert the following script tags in the head tag of your page**
+**To test your code, insert the following script tags in the head tag of your page.** Alternatively, to make the script load faster, you can download the script and host it locally in your `client` directory.
 ```
 <script src="http://35.183.65.155/cpen400a/test-a1.js" type="text/javascript"></script>
 ```
