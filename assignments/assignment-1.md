@@ -42,6 +42,32 @@ To help you get started, you will need to structure your project like the follow
 * `package.json` contains information such as dependent NPM modules. This is used by NPM.
 
 
+## Using a Web Server
+
+While you can still view your application pages (`index.html`, `chat.html`, `profile.html`) locally by opening them with a browser, you should work on the pages by serving them with a web server and viewing them as actual web pages (not a local HTML file). To facilitate this process, we have provided a basic web server in your repository - `server.js`. You can serve your client-side application by typing the following at the root directory of your project.
+
+### Serving your Web Application
+
+```
+# we assume your project root is = project-me
+
+~/project-me$ node server.js
+```
+
+### Installing Dependencies
+
+The server uses ExpressJS, which is a popular NodeJS framework for building web servers. You will need to install this module by typing the following:
+```
+~/project-me$ npm install express
+```
+OR the following (we already declared this library as a dependency in `package.json` so that NPM knows what all modules to install)
+```
+~/project-me$ npm install
+```
+
+When the web server is running, your client-side application will be available at `http://localhost:3000`.
+
+
 ## Tasks
 
 1. [HTML] Create the base html layout that will be used for all 3 pages in the application. Refer to the screenshot above and the reference diagram below. When you are done with this task, you can copy and paste the HTML to each of the pages (`index.html`, `chat.html`, `profile.html`). The 3 pages differ only in their contents inside the `#page-view` element:
