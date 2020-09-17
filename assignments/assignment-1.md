@@ -134,7 +134,7 @@ There are 6 tasks for this assignment (Total 35 Points):
 
 Copy the **commit hash** from Github and enter it in Canvas.
 
-For step-by-step instructions, refer to [the tutorial](../tutorials/canvas-submission.md).
+For step-by-step instructions, refer to [the tutorial](canvas-submission.md).
 
 
 ### Deadline:
