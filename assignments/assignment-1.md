@@ -15,6 +15,8 @@ The above screenshot is just an example, and you are free to choose colours and 
 
 **For this assignment, you will be using only HTML and CSS to create the layout of the GUI and apply styles to different DOM elements. There is no JavaScript required for this assignment, so you will be penalized if you use JavaScript for this assignment.**
 
+Throughout the project, **we prohibit the use of third-party CSS and JavaScript frameworks** like Bootstrap, React, Angular, or Vue, because we want you to explore the inner workings of a web application. As you go through the assignments, hopefully you will understand how these third-party frameworks do their "magic".
+
 
 ## Directory Structure
 
