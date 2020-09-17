@@ -54,7 +54,7 @@ To help you get started, you will need to structure your project like the follow
                 * Link (`a href = /profile`)
         * Page Container (`div id = page-view`)
 
-    * **You can find and download all the images that you need for the application [HERE](images/). Alternatively, you are free to use your own images.**
+    * **You can find all the images that you need for the application in the `client/assets` directory in your project repository. Alternatively, you are free to use your own images.**
 
 2. [HTML] `index.html` will be the main page of the application. In the `#page-view` div of the base layout, create a new `div` with the class name `content` that will hold all the contents of the page. Inside that `div`, create a list of chat rooms using an unordered list (i.e., `ul`). Inside each list item, there should be a link to the URL `/chat`. Refer to the reference diagram below.
 
