@@ -133,7 +133,7 @@ When the web server is running, your client-side application will be available a
 
 6. [CSS] You need to add some basic interactivity to the website using pure css (no javascript is required for these tasks, so *please do not use JavaScript*)
     * A) When you hover over any of the items in the main navigation menu (`#app-menu`), the **text and background color should be changed**. As soon as you move the mouse pointer away, the color should be restored back to the original color.
-    * B) When you hover over any of the chat room menu item on `index.html` page, the **background color around the menu item should change**. As soon as you take the mouse pointer away, the price should disappear and the background should revert to its original color.
+    * B) When you hover over any of the chat room menu item on `index.html` page, the **background color around the menu item should change**. As soon as you take the mouse pointer away, the background should revert to its original color.
 
 
 ## Testing
