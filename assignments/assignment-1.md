@@ -136,7 +136,7 @@ When the web server is running, your client-side application will be available a
 
     ![hover-a.png](../assets/hover-a.png?raw=true "Menu Item Hover")
 
-    * B) When you hover over any of the chat room menu item on `index.html` page (`.room-list li`), the **background color around the menu item should change**. As soon as you take the mouse pointer away, the background should revert to its original color.
+    * B) When you hover over any of the chat room menu item on `index.html` page (`.room-list li`), the **background color should change**. As soon as you take the mouse pointer away, the background should revert to its original color.
 
     ![hover-b.png](../assets/hover-b.png?raw=true "Room Item Hover")
 
