@@ -132,8 +132,14 @@ When the web server is running, your client-side application will be available a
     * In `chat.html`, the message box for other users (i.e., `div.message`) should stick to the left, while the message box for the current application user (i.e., `div.my-message`) should stick to the right. They should have different colors.
 
 6. [CSS] You need to add some basic interactivity to the website using pure css (no javascript is required for these tasks, so *please do not use JavaScript*)
-    * A) When you hover over any of the items in the main navigation menu (`#app-menu`), the **text and background color should be changed**. As soon as you move the mouse pointer away, the color should be restored back to the original color.
-    * B) When you hover over any of the chat room menu item on `index.html` page (`#room-list > li`), the **background color around the menu item should change**. As soon as you take the mouse pointer away, the background should revert to its original color.
+    * A) When you hover over any of the items in the main navigation menu (`#app-menu li`), the **text and background color should be changed**. As soon as you move the mouse pointer away, the color should be restored back to the original color.
+
+    ![hover-a.png](../assets/hover-a.png?raw=true "Menu Item Hover")
+
+    * B) When you hover over any of the chat room menu item on `index.html` page (`.room-list li`), the **background color around the menu item should change**. As soon as you take the mouse pointer away, the background should revert to its original color.
+
+    ![hover-b.png](../assets/hover-b.png?raw=true "Room Item Hover")
+
 
 
 ## Testing
