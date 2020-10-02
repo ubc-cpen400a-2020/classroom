@@ -92,10 +92,10 @@ var messageBox = createDOM(
         * ii. `inputElem` - store reference to the `input` element for entering the new room name.
         * iii. `buttonElem` - store reference to the `button` element for creating a room.
 
-5. (10 Points) [JS] In Task 3, you have defined higher level objects to represent each page, but they don't hold any data. In this task you will define some more objects you will use to represent the application state.
+5. (7 Points) [JS] In Task 3, you have defined higher level objects to represent each page, but they don't hold any data. In this task you will define some more objects you will use to represent the application state.
     * A) Define a class named `Room`. The constructor should accept 4 arguments (in this order): `id`, `name`, `image`, `messages`. For `image`, provide a default image url (e.g., `assets/everyone-icon.png`), and for `messages`, provide an empty array as the default value. Inside the constructor, assign the given arguments to the properties with the same name (`id`, `name`, `image`, and `messages`).
     * B) In the `Room` class, add a method with the following signature: `addMessage(username, text)`. If the given `text` is an empty string or a sequence of whitespaces, the method should simply return. Otherwise, the method should create a new object with the keys `username` and `text`, assigning the given arguments to the corresponding field, then push the object into the `this.messages` array.
-    * C) Define a class named `Lobby`, whose constructor takes zero arguments. Inside the constructor, initialize a `rooms` property, assigning it an *associative array* of 4 `Room` objects. Use the `Room` class you defined in Task 4.A to create new instances. In the next Task, we will dynamically render the lobby page from this array.
+    * C) Define a class named `Lobby`, whose constructor takes zero arguments. Inside the constructor, initialize a `rooms` property, assigning it an *associative array* of 4 `Room` objects indexed by the `id` property. Use the `Room` class you defined in Task 4.A to create new instances. In the next Task, we will dynamically render the lobby page from this array.
     * D) In the `Lobby` class, add a method with the signature `getRoom(roomId)`. The method should search through the rooms and return the room with `id` = `roomId` if found.
     * E) In the `Lobby` class, add a method with the signature `addRoom(id, name, image, messages)`. The method should create a new `Room` object, using the given arguments, and add the object in the `this.rooms` array.
 
@@ -110,14 +110,18 @@ var messageBox = createDOM(
     * B) Inside the constructor of `LobbyView`, assign a new anonymous function to the `this.lobby` object's `onNewRoom` property. The anonymous function should accept a single argument `room`. The function should add a new list item to the `this.listElem` element, generating the DOM with the given `room` data. Alternatively, you could also simply call `redrawList` method (this would be less efficient, as it redraws the entire list).
     * *The mechanism you implemented in this task may seem strange at first, but this is essentially an "unsafe" version of the event listener interface, similar to DOM Event API 1.0 (but not 2.0, which supports multiple event listeners). This event-driven pattern is extremely prevalent in JavaScript applications, so you should spend some time following along the control-flow, if it is unclear.*
 
-8. (7 Points) [JS] Finally, you will add dynamism and interactivity in the "chat view". The tasks will be similar to Task 6 and 7, but with an extra bit of complexity.
+8. (10 Points) [JS] Finally, you will add dynamism and interactivity in the "chat view". The tasks will be similar to Task 6 and 7, but with an extra bit of complexity.
     * A) At the end of the `addMessage` method of the `Room` object, check if `this.onNewMessage` function is defined. If it is defined, call the function, passing the newly created message object as the argument.
-    * B) Inside the constructor of `ChatView`, add a new property named `room` and assign `null` to it. Then, add a `click` event handler to the `this.buttonElem` element. The event handler should read the text value from `this.inputElem` and call the `addMessage` method of the `this.room` object. After that, clear the text value of `this.inputElem`.
-    * C) In the `ChatView` class, define a method with the signature `setRoom(room)`. We need this method because unlike `LobbyView` where `this.lobby` object is fixed, `this.room` object can be changed. In this method, perform the following operations:
+    * B) In the `ChatView` class, define a method with the signature `sendMessage()`. The function should read the text value from `this.inputElem` and call the `addMessage` method of the `this.room` object. After that, clear the text value of `this.inputElem`.
+    * C) Inside the constructor of `ChatView`, make the following modifications:
+        * i. Add a new property named `room` and assign `null` to it. 
+        * ii. Add a `click` event handler to the `this.buttonElem` element. The event handler should call the `sendMessage` method.
+        * iii. Add a `keyup` event handler to the `this.inputElem` element. The event handler should call the `sendMessage` method *only if the key is the "enter" key without the "shift" key*.
+    * D) In the `ChatView` class, define a method with the signature `setRoom(room)`. We need this method because unlike `LobbyView` where `this.lobby` object is fixed, `this.room` object can be changed. In this method, perform the following operations:
         * i. Assign the given `room` argument to the `room` property.
         * ii. Update the `this.titleElem` to display the new room name.
         * iii. Clear the contents of `this.chatElem`, and dynamically create the message boxes from the `this.room.messages` array.
-        * iv. Assign an anonymous function accepting a single argument `message` to `this.room` object's `onNewMessage` property. The function should add a new message box on `this.chatElem` element.
+        * iv. Assign an anonymous function accepting a single argument `message` to `this.room` object's `onNewMessage` property (i.e., attach a new event listener). The function should add a new message box on `this.chatElem` element.
 
 
 ## Testing
@@ -163,10 +167,10 @@ There are 8 tasks for this assignment (Total 35 Points):
 * Task 2: 4 Points
 * Task 3: 4 Points
 * Task 4: 2 Points
-* Task 5: 10 Point
+* Task 5: 7 Point
 * Task 6: 5 Point
 * Task 7: 2 Point
-* Task 8: 7 Point
+* Task 8: 10 Point
 
 
 ## Submission instructions:
