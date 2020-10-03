@@ -111,17 +111,18 @@ var messageBox = createDOM(
     * *The mechanism you implemented in this task may seem strange at first, but this is essentially an "unsafe" version of the event listener interface, similar to DOM Event API 1.0 (but not 2.0, which supports multiple event listeners). This event-driven pattern is extremely prevalent in JavaScript applications, so you should spend some time following along the control-flow, if it is unclear.*
 
 8. (10 Points) [JS] Finally, you will add dynamism and interactivity in the "chat view". The tasks will be similar to Task 6 and 7, but with an extra bit of complexity.
-    * A) At the end of the `addMessage` method of the `Room` object, check if `this.onNewMessage` function is defined. If it is defined, call the function, passing the newly created message object as the argument.
-    * B) In the `ChatView` class, define a method with the signature `sendMessage()`. The function should read the text value from `this.inputElem` and call the `addMessage` method of the `this.room` object. After that, clear the text value of `this.inputElem`.
-    * C) Inside the constructor of `ChatView`, make the following modifications:
+    * A) Declare a global variable `profile`, and assign an object with a single key `username`, assigning an arbitrary name (e.g. `"Alice"`). This object will represent the current user.
+    * B) At the end of the `addMessage` method of the `Room` object, check if `this.onNewMessage` function is defined. If it is defined, call the function, passing the newly created message object as the argument.
+    * C) In the `ChatView` class, define a method with the signature `sendMessage()`. The function should read the text value from `this.inputElem` and call the `addMessage` method of the `this.room` object. You can pass in `profile.username` as the first argument. After that, clear the text value of `this.inputElem`.
+    * D) Inside the constructor of `ChatView`, make the following modifications:
         * i. Add a new property named `room` and assign `null` to it. 
         * ii. Add a `click` event handler to the `this.buttonElem` element. The event handler should call the `sendMessage` method.
         * iii. Add a `keyup` event handler to the `this.inputElem` element. The event handler should call the `sendMessage` method *only if the key is the "enter" key without the "shift" key*.
-    * D) In the `ChatView` class, define a method with the signature `setRoom(room)`. We need this method because unlike `LobbyView` where `this.lobby` object is fixed, `this.room` object can be changed. In this method, perform the following operations:
+    * E) In the `ChatView` class, define a method with the signature `setRoom(room)`. We need this method because unlike `LobbyView` where `this.lobby` object is fixed, `this.room` object can be changed. In this method, perform the following operations:
         * i. Assign the given `room` argument to the `room` property.
         * ii. Update the `this.titleElem` to display the new room name.
-        * iii. Clear the contents of `this.chatElem`, and dynamically create the message boxes from the `this.room.messages` array.
-        * iv. Assign an anonymous function accepting a single argument `message` to `this.room` object's `onNewMessage` property (i.e., attach a new event listener). The function should add a new message box on `this.chatElem` element.
+        * iii. Clear the contents of `this.chatElem`, and dynamically create the message boxes from the `this.room.messages` array. To distinguish between other users' messages and the current user's, you can compare the username against `profile.username`.
+        * iv. Assign an anonymous function accepting a single argument `message` to `this.room` object's `onNewMessage` property (i.e., attach a new event listener). The function should add a new message box on `this.chatElem` element. To distinguish between other users' messages and the current user's, you can compare the username against `profile.username`.
 
 
 ## Testing
