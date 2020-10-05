@@ -123,7 +123,10 @@ var messageBox = createDOM(
         * ii. Update the `this.titleElem` to display the new room name.
         * iii. Clear the contents of `this.chatElem`, and dynamically create the message boxes from the `this.room.messages` array. To distinguish between other users' messages and the current user's, you can compare the username against `profile.username`.
         * iv. Assign an anonymous function accepting a single argument `message` to `this.room` object's `onNewMessage` property (i.e., attach a new event listener). The function should add a new message box on `this.chatElem` element. To distinguish between other users' messages and the current user's, you can compare the username against `profile.username`.
-
+    * F) Finally, we want to show the specific chat room when the user clicks on it in the lobby. We return to the `renderRoute()` function in `main` to do this.
+        * i. In the branch that reads if the URL has a `"chat"` path, extract the `Room` object with the current room ID (by calling the `getRoom` function of the `Lobby` object).
+        * ii. Call the `setRoom` function of the `chatView` object with the extracted room object.
+        * iii. Make sure you handle exceptions before the call (i.e. the room exists and is not null).
 
 ## Testing
 
