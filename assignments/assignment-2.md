@@ -45,8 +45,7 @@ function emptyDOM (elem){
 // Creates a DOM element from the given HTML string
 function createDOM (htmlString){
 	let template = document.createElement('template');
-	htmlString.trim();
-	template.innerHTML = htmlString;
+	template.innerHTML = htmlString.trim();
 	return template.content.firstChild;
 }
 
