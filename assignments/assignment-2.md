@@ -162,6 +162,16 @@ function main(){
 You will see a red button on the top-right corner of your web page. Click it to test your code.
 Watch out for any alert messages or console output, which tell you any missing components/functionalities. You are responsible for ensuring that all the functionalities above are implemented correctly - the tests are only there to help you. We reserve the right to test your code with other test cases than the above.
 
+The test script uses certain default values during the test.
+* Room ID - the test script expects that you have a Room instance with the ID `"room-1"`.
+* Default room image URL - the test script expects the default image URL to be `"assets/everyone-icon.png"`.
+
+To set a different default value for your application, you can use `cpen400a.setDefault` as shown below:
+```
+cpen400a.setDefault("image", YOUR_IMAGE_URL);
+cpen400a.setDefault("testRoomId", YOUR_ROOM_ID);
+```
+
 
 ## Marking
 

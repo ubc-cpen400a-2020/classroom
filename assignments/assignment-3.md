@@ -135,6 +135,17 @@ function main(){
 You will see a red button on the top-right corner of your web page. Click it to test your code.
 Watch out for any alert messages or console output, which tell you any missing components/functionalities. You are responsible for ensuring that all the functionalities above are implemented correctly - the tests are only there to help you. We reserve the right to test your code with other test cases than the above.
 
+The test script uses certain default values during the test.
+* WebSocket server URL - the test script expects that your WebSocket server is at `"ws://localhost:8000"`.
+* Default room image URL - the test script expects the default image URL to be `"assets/everyone-icon.png"`.
+
+To set a different default value for your application, you can use `cpen400a.setDefault` as shown below:
+```
+cpen400a.setDefault("webSocketServer", YOUR_SERVER_URL);
+cpen400a.setDefault("image", YOUR_IMAGE_URL);
+```
+
+
 ### Server-side
 
 **Download this [`cpen400a-tester.js`](tests/cpen400a-tester.js) script and place it in your project directory. Then in `server.js`, import the tester module as shown below:**
