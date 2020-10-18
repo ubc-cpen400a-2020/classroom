@@ -85,7 +85,7 @@ Depending on your NodeJS installation, you may have to add the `node_modules/.bi
     * B) Attach a `message` event handler on the `WebSocket` instance. Inside the event handler, you will need to do the following:
         * i. Parse the given message passed in the argument. The message is a serialized JSON string and will have 3 fields: `roomId`, `username`, and `text`.
         * ii. Based on the `roomId`, get the appropriate `Room` object using `Lobby.getRoom` method you implemented from assignment 2. Then add the message in the `Room` object using `Room.addMessage` method.
-    * C) Modify the contructor of `ChatView` class to accept a single argument `socket`. It should store a reference to the given `socket` object in its property with the same name `socket`.
+    * C) Modify the contructor of `ChatView` class to accept a single argument `socket`. It should store a reference to the given `socket` object in its property with the same name `socket`. Then, modify the existing instantiation of `chatView` to use the `socket` object created in Task 4A.
     * D) Modify the `sendMessage` method of `ChatView`. In addition to all the code you have from assignment 2 (you won't need to remove any code, provided you have implemented it correctly in the previous assignment), send the message to the server using the `this.socket` object. The message should be an object with 3 fields: `roomId`, `username`, `text`. Make sure you serialize the object into a JSON string.
 
 5. (4 Points) [JS (`server.js`)] In this task, you will make the "chat view" fully functional by implementing a `WebSocket` server to act as a message broker between the clients.
