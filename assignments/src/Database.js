@@ -22,6 +22,10 @@ function Database(mongoUrl, dbName){
 			}
 		)
 	});
+	this.status = () => this.connected.then(
+		db => ({ error: null, url: mongoUrl, db: dbName }),
+		err => ({ error: err })
+	);
 }
 
 Database.prototype.getRooms = function(){
