@@ -11,7 +11,7 @@ This repository contains all the resources needed for the CPEN400A assignments a
     1. [Assignment 1](assignments/assignment-1.md) - released on Sep 17, due Oct 1
     2. [Assignment 2](assignments/assignment-2.md) - released on Oct 2, due Oct 15
     3. [Assignment 3](assignments/assignment-3.md) - released on Oct 16, due Nov 5
-    4. Assignment 4 - released on Nov 6, due Nov 19
+    4. [Assignment 4](assignments/assignment-4.md) - released on Nov 6, due Nov 19
     5. Assignment 5 - released on Nov 20, due Dec 3
 
 ## Q & A
