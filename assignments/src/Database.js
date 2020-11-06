@@ -24,7 +24,7 @@ function Database(mongoUrl, dbName){
 	});
 }
 
-Database.prototype.getRooms = function(queryParams){
+Database.prototype.getRooms = function(){
 	return this.connected.then(db =>
 		new Promise((resolve, reject) => {
 			/* TODO: read the chatrooms from `db`
